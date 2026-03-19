@@ -27,7 +27,7 @@
     border          : none;
     outline         : none;
 
-    color           : var(--fontcolor-1);
+    color           : var(--fontcolor-3);
     border-radius   : var(--borderadius-circle);
     background-color: var(--backgroundcolor-1);
     cursor          : pointer;
@@ -44,12 +44,12 @@
     height          : 100%;
     width           : 100%;
 
-    border          : 1px solid var(--backgroundcolor-2);
+    border          : 1px solid var(--backgroundcolor-4);
     outline         : none;
 
     font-size       : clamp(1.2rem, 1vw, 1.2rem);
     color           : var(--fontcolor-4);
-    border-radius   : var(--borderadius-round);
+    border-radius   : var(--borderadius-square);
     background-color: var(--backgroundcolor-1);
 }
 
@@ -62,13 +62,13 @@
     display              : grid;
     grid-template-columns: repeat(auto-fill, minmax(min(15em, 100%), 1fr));
 }
-.note-card {
+.create-note-card, .note-card {
     padding         : 0.6em 0.6em 0 0.6em;
     gap             : var(--gap-element);
 
     aspect-ratio    : 1/1;
 
-    border-radius   : var(--borderadius-square);
+    border: 1px solid var(--backgroundcolor-4);
 
     cursor          : pointer;
     position        : relative;
@@ -81,6 +81,15 @@
         .note-title, .note-content {background-color: var(--backgroundcolor-2);}
         background-color: var(--backgroundcolor-2);
     }
+}
+.create-note-card {
+    align-items: center;
+    justify-content: center;
+}
+.create-note-title
+{
+    font-size: clamp(1.8rem, 1.8vw, 1.2rem);
+    color: var(--fontcolor-3);
 }
 .note-title, .note-content {
     font-weight     : 100;
@@ -122,7 +131,7 @@
     border          : none;
     outline         : none;
     font-family     : 'Courier New', monospace;
-    border-bottom   : 1px solid var(--backgroundcolor-3);
+    border-bottom   : 1px solid var(--backgroundcolor-4);
 
     font-size       : clamp(1.2rem, 1.2vw, 1.2rem);
     color           : var(--fontcolor-4);
@@ -140,29 +149,34 @@
     padding        : var(--padding-element);
     gap            : 0.6em;
     width          : 100%;
-    border-top     : 1px solid var(--backgroundcolor-3);
+    height         : fit-content;
+    max-height     : fit-content;
+    border-top     : 1px solid var(--backgroundcolor-4);
     display        : flex;
+    flex-wrap      : wrap;
     justify-content: space-between;
 }
-.left-wrap  {width: 5em;}
-.right-wrap {gap: var(--gap-element); width: 10.6em; display: flex;}
+.left-wrap  {gap: 0.6em; width: fit-content; display: flex; flex-wrap: wrap; align-items: center;}
+.right-wrap {gap: var(--gap-element);}
 
 .cancel-button, .save-button, .delete-button {
-    width           : min(100%, 5em);
+    width           : 5em;
     height          : 2em;
 
     border          : none;
     outline         : none;
 
-    font-size       : clamp(1rem, 1.2vw, 1.2rem);
+    font-size       : 1em;
     font-weight     : bold;
     color           : var(--closebutton-1);
+    border          : 1px solid var(--backgroundcolor-4);
     border-radius   : var(--borderadius-square);
-    background-color: var(--backgroundcolor-3);
+    background-color: var(--backgroundcolor-1);
 
     cursor          : pointer;
     &:hover{color   : var(--closebutton-2); background-color: var(--backgroundcolor-4);}
 }
+
 /*.save-button {
     color           : var(--savebutton-1);
     background-color: var(--backgroundcolor-a);
