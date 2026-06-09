@@ -65,10 +65,10 @@ body {
     --darkmode-savebutton-1: oklch(80.45% 0.01914 283.933);
     --darkmode-savebutton-2: oklch(90% 0.01914 283.933);
 
-    --darkmode-backgroundcolor-1: oklch(25% 0 0); /* oklch(0.1545 0.0191 283.94) */
-    --darkmode-backgroundcolor-2: oklch(29% 0 0); /* oklch(0.2745 0.0191 283.94) */
-    --darkmode-backgroundcolor-3: oklch(35% 0 0); /* oklch(0.3245 0.0191 283.94) */
-    --darkmode-backgroundcolor-4: oklch(41% 0 0); /* oklch(0.3045 0.0191 283.94) */
+    --darkmode-backgroundcolor-1: oklch(15% 0 0); /* oklch(0.1545 0.0191 283.94) */
+    --darkmode-backgroundcolor-2: oklch(20% 0 0); /* oklch(0.2745 0.0191 283.94) */
+    --darkmode-backgroundcolor-3: oklch(25% 0 0); /* oklch(0.3245 0.0191 283.94) */
+    --darkmode-backgroundcolor-4: oklch(30% 0 0); /* oklch(0.3045 0.0191 283.94) */
 
     --darkmode-backgroundcolor-a: oklch(45.674% 0.10812 277.992);
     --darkmode-backgroundcolor-b: oklch(50.674% 0.10812 277.992);
